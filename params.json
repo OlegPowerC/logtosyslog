@@ -1,0 +1,1 @@
+{"Syslogserver":"192.168.1.10","Syslogport": 514,"Severity": 3,"Facility":20,"filename":"/var/log/radius.log","debugg":1}
