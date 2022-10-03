@@ -30,9 +30,7 @@ type alarm struct {
 	Error int    `json:"error"`
 }
 
-var mmymutex sync.Mutex
 var debugmode bool = false
-var errorgettimeout int64 = 0
 
 func SendMessageToSyslogServer(Data string, Severity int, Facility int, ServerAddrAdndPort string) (sentbytes int, err error) {
 	if Severity > 7 {
