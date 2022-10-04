@@ -25,11 +25,6 @@ type params struct {
 	Debugmode    int    `json:"debugg"`
 }
 
-type alarm struct {
-	Name  string `json:"name"`
-	Error int    `json:"error"`
-}
-
 var debugmode bool = false
 
 func SendMessageToSyslogServer(Data string, Severity int, Facility int, ServerAddrAdndPort string) (sentbytes int, err error) {
