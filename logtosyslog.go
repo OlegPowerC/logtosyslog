@@ -100,7 +100,14 @@ func waitfsevent(watcher *fsnotify.Watcher, fname string, SyslogServerFullUrl st
 					strfind = strings.TrimRight(strfind, "\r\n")
 					strfind = strings.TrimRight(strfind, "\n")
 					if len(SyslogServerFullUrl) > 4 {
-						SendMessageToSyslogServer(strfind, Severity, Facility, SyslogServerFullUrl)
+						sentbytes, senderror := SendMessageToSyslogServer(strfind, Severity, Facility, SyslogServerFullUrl)
+						if senderror != nil {
+							fmt.Println(senderror)
+						} else {
+							if debugmode {
+								fmt.Println("sent:", sentbytes, "bytes")
+							}
+						}
 					}
 				}
 			}
