@@ -100,7 +100,7 @@ func waitfsevent(watcher *fsnotify.Watcher, fname string, SyslogServerFullUrl st
 							fmt.Println(senderror)
 						} else {
 							if debugmode {
-								fmt.Println("sent:", sentbytes, "bytes")
+								fmt.Println("sent:", sentbytes, "bytes", "to syslog server:", SyslogServerFullUrl)
 							}
 						}
 					}

@@ -1,9 +1,9 @@
 #!/bin/bash
 #
 BASE=/tmp
-PID=/tmp/app.pid
-LOG=/tmp/app.log
-ERROR=/tmp/app-error.log
+PID=/tmp/logtosyslog.pid
+LOG=/tmp/logtosyslog.log
+ERROR=/tmp/logtosyslog-error.log
 
 COMMAND='/opt/logtosyslog/logtosyslog'
 
