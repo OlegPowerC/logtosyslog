@@ -1,0 +1,14 @@
+[Unit]
+Description=logtosyslog
+After=network.target
+
+[Service]
+Type=simple
+User=root
+WorkingDirectory=/opt/logtosyslog
+ExecStart=/opt/logtosyslog/logtosyslog
+Restart=on-failure
+# Other Restart options: or always, on-abort, etc
+
+[Install]
+WantedBy=multi-user.target
